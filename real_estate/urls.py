@@ -17,8 +17,20 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from realtors import views
+from listings import views as listingsviews
+from contacts import views as contactsviews                 
+from rest_framework.routers import DefaultRouter
+
+
+
+router = DefaultRouter()
+router.register('realtorsapi', views.RealtorViewSet)
+router.register('listingsapi', listingsviews.ListingViewSet)
+router.register('contactsapi', contactsviews.ContactViewSet)
 
 urlpatterns = [
+    path('api/', include(router.urls)),
 	path('', include('pages.urls')),
     path('admin/', admin.site.urls),
     path('listings/', include('listings.urls')),

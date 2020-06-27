@@ -2,8 +2,16 @@ from django.shortcuts import get_object_or_404, render
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from listings.choices import price_choices, bedroom_choices, state_choices
 
-# Create your views here.
+from .serializers import ListingSerializer
+from rest_framework import viewsets
 from .models import  Listing
+
+
+
+
+class ListingViewSet(viewsets.ModelViewSet):
+	queryset = Listing.objects.all()
+	serializer_class = ListingSerializer
 
 def index(request):
 

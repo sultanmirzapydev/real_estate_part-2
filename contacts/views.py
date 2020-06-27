@@ -6,6 +6,14 @@ from .models import Contact
 # to send email we need to import send_mail
 from django.core.mail import send_mail
 
+from .serializers import ContactSerializer
+from rest_framework import viewsets
+
+
+
+class ContactViewSet(viewsets.ModelViewSet):
+	queryset = Contact.objects.all()
+	serializer_class = ContactSerializer
 
 
 def contact(request):
