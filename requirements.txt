@@ -21,7 +21,7 @@ coveralls==1.10.0
 distlib==0.3.0
 Django==3.0.4
 django-tinymce4-lite==1.7.5
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 doc8==0.8.0
 docker==4.2.0
 docopt==0.6.2
