@@ -81,7 +81,7 @@ pytz==2019.3
 pyupgrade==1.26.2
 pywin32==227
 pywin32-ctypes==0.2.0
-PyYAML==5.3.1
+PyYAML==5.4
 query-string==2019.4.13
 readme-renderer==26.0
 regex==2020.6.8
